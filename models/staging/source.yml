@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: postgres
+    schema: STAGING
+    database: DBT_DEMO
+
+    tables:
+      - name: test1
+      - name: employee
+      - name: dbt_data

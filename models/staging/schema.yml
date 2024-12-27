@@ -1,0 +1,42 @@
+
+version: 2
+
+models:
+  - name: stg_test
+    description: "this table contains json data for transformation"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "name"
+      - name: age
+        description: "age"
+      - name: metadata
+        description: "metadata"
+
+  - name: stg_employee
+    description: "this table contains employee data"
+    columns:
+      - name: EmployeeID
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: FirstName
+        description: "first name of employee"
+      - name: LastName
+        description: "last name of employee"
+      - name: Department
+        description: "Department of employee"
+      - name: Salary
+        description: "Salary of employee"
+      - name: DateOfJoining
+        description: "Joining Date of employee"
+      - name: SalaryCategory
+        description: "Category for Salary"
+  - name: stg_dbtdata
+    description: "this table contains dbt data for incremental load"
+      
